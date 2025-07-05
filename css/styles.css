@@ -620,8 +620,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    
     width: 408px;
+    padding: 72px 24px 24px 24px;
     min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
@@ -647,6 +647,10 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-close {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
@@ -661,16 +665,14 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: center;
     color: #2e2f42;
     text-align: center;
-    padding: 72px 24px 24px 24px;
+    margin-bottom: 16px;
 }
 
 .label-container {
     width: 360px;
     height: 58px;
-    margin-left: 24px;
     margin-bottom: 8px;
 }
 
@@ -722,7 +724,6 @@ img {
 .textarea-container { 
     display: flex;
     flex-direction: column;
-    margin-left: 24px;
     margin-bottom: 16px;
     width: 360px;
 }
@@ -738,7 +739,7 @@ img {
     padding: 8px 16px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
     background-color: transparent;
@@ -759,7 +760,6 @@ img {
 }
 
 .checkbox-container {
-    margin-left: 24px;
     margin-bottom: 24px;
 }
 .checkbox-span-icon {
