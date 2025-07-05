@@ -562,6 +562,8 @@ img {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+    background-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -579,7 +581,6 @@ img {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    gap: 16px;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -593,6 +594,7 @@ img {
 
 .icon-subcribe {
     fill: #fff;
+    margin-left: 16px;
 }
 /* MOdal */
 .backdrop {
@@ -605,8 +607,8 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 50ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
     opacity: 1;
@@ -625,8 +627,7 @@ img {
     background-color: #fcfcfc;
     border-radius: 4px;
     transform: translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop:not(.is-open) .modal {
@@ -646,8 +647,7 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
@@ -656,9 +656,7 @@ img {
     border: none;
 }   
 
-
 .modal-text {
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -666,8 +664,7 @@ img {
     text-align: center;
     color: #2e2f42;
     text-align: center;
-    margin-top: 72px;
-    margin-bottom: 16px;
+    padding: 72px 24px 24px 24px;
 }
 
 .label-container {
@@ -678,13 +675,13 @@ img {
 }
 
 .label-modal {
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.16;
     letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 4px;
+    display: block;
 }
 .input-modal:hover,
 .input-modal:focus {
@@ -726,21 +723,26 @@ img {
     display: flex;
     flex-direction: column;
     margin-left: 24px;
+    margin-bottom: 16px;
+    width: 360px;
 }
 
 
 .text-modal {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 360px;
+    width: 100%;
     height: 120px;
     margin-bottom: 24px;
     resize: none;
     padding: 8px 16px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.7;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    outline: transparent;
 }
 .text-modal:hover,
 .text-modal:focus {
@@ -750,17 +752,16 @@ img {
 .text-modal::placeholder {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-container {
     margin-left: 24px;
     margin-bottom: 24px;
 }
-
-
 .checkbox-span-icon {
     width: 16px;
     height: 16px;
@@ -777,33 +778,34 @@ img {
     fill: #fff;
 }
 .checkbox-modal:checked+.checkbox-label .checkbox-span-icon {
-    background-color: #4d5ae5;
-    border: none
+    background-color:#404bbf;
+    border: none;
 }
 
 .checkbox-modal:checked+.checkbox-label .checkbox-icon {
-    fill: #f4f4fd;
+    fill: #F4F4FD;
 }
 
 .checkbox-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.7;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
 
 .privacy-policy {
-    line-height: 1.33333;
+    line-height: 1.3;
     text-decoration: underline;
     color: #4d5ae5;
     margin-bottom: 24px;
 }
 
 .modal-btn-submit {
+    cursor: pointer;
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     background-color: #4D5AE5;
     font-weight: 500;
